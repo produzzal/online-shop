@@ -10,7 +10,7 @@ const Cards = () => {
           Create With <i className="zmdi zmdi-favorite red"></i> By:{" "}
           <strong>Deni Kurniawan</strong> From:{" "}
           <i>
-            <a href="http://blog.wingerdstok.com" className="wsk-btn">
+            <a href="" className="wsk-btn">
               Wingerdstok
             </a>
           </i>
