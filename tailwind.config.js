@@ -9,7 +9,11 @@ export default withMT({
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      color: {
+        'white': '#FFF'
+      }
+    },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("daisyui", "flowbite/plugin")],
 })
