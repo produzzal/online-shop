@@ -20,19 +20,19 @@ const Header = () => {
           </div>
         )}
       >
-        <div className="w-[1360px] h-[556px]">
+        <div className="">
 		<img
 		
 		src="https://i.ibb.co/MGQJtXK/2daa20bf-67e0-4f17-8a44-0ca30601994f-BD-1920-539.jpg"
 		alt="image 1"
-		className="w-full h-full object-cover"
+		className="w-[1360px] h-[556px] object-cover"
 	  />
 		</div>
-		<div className="w-[1360px] h-[556px]">
+		<div className="">
 		<img
 		src="https://i.ibb.co/7RMbqg5/0edbdbeb-8bc7-4753-b3e2-432f1e04cfbf-BD-1920-300.jpg"
 		alt="image 2"
-		className="w-full h-full object-cover"
+		className="w-[1360px] h-[556px] object-cover"
 	  />
 		</div>
         <img
