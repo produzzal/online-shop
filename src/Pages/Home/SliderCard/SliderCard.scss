@@ -102,12 +102,12 @@
 	  position: relative;
 	  box-shadow: 0 0 20px 10px rgba($negro,.1);
 	  transition: ease all .3s;
-	  &:hover{
-		transform: translateY(-10px);
-		.imgProd{
-		  height: 350px;
-		}
-	  }
+	//   &:hover{
+	// 	transform: translateY(-10px);
+	// 	.imgProd{
+	// 	  height: 350px;
+	// 	}
+	//   }
 	  .colorProd{
 		display: block;
 		position: absolute;

@@ -9,11 +9,10 @@ import Slider from "react-slick";
 
 const SliderCard = () => {
   var settings = {
-    dots: false,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 5,
     slidesToScroll: 2,
     pauseOnHover: false,
