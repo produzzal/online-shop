@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Navbar,
   Collapse,
@@ -7,10 +7,20 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 function NavList() {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => { })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="my-2  flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         variant="small"
@@ -42,12 +52,12 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <a
-          href="#"
+        <Link
+          to='/addItem'
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Blocks
-        </a>
+          AddItem
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -55,12 +65,38 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <a
-          href="#"
+        <Link
+          to="/signUp"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Docs
-        </a>
+          SignUp
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <Link
+          to="/logIn"
+          className="flex items-center hover:text-blue-500 transition-colors"
+        >
+          LogIn
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <button
+          onClick={handleLogOut}
+          className="flex items-center hover:text-blue-500 transition-colors"
+        >
+          LogOut
+        </button>
       </Typography>
     </ul>
   );
@@ -79,8 +115,8 @@ const NavBar = () => {
     };
   }, []);
   return (
-    <div className="pl-2 pb-20">
-      <Navbar className="mx-auto  px-6 py-3 fixed z-10">
+    <div className="pl-2  pb-20">
+      <Navbar className="mx-auto  px-6 pr-5 lg:pr-0 py-3 fixed z-10">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
@@ -88,7 +124,7 @@ const NavBar = () => {
             variant="h6"
             className="mr-4 cursor-pointer py-1.5"
           >
-            Material Tailwind
+            Ajaira Shop
           </Typography>
           <div className="hidden lg:block">
             <NavList />

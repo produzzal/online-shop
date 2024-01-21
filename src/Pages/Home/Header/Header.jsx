@@ -4,12 +4,15 @@ import Slider from "react-slick";
 const Header = () => {
   var settings = {
     autoplay: true,
+    dots: false,
     autoplaySpeed: 3000,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
+    nextArrow: false,
+    prevArrow: false,
     initialSlide: 0,
     responsive: [
       {
